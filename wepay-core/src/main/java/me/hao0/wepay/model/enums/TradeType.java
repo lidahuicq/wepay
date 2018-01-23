@@ -27,7 +27,12 @@ public enum TradeType {
     /**
      * 刷卡支付
      */
-    MICROPAY("MICROPAY");
+    MICROPAY("MICROPAY"),
+    
+    /**
+     * 微信委托代扣支付
+     */
+    PAP("PAP");
 
 
     private String type;
