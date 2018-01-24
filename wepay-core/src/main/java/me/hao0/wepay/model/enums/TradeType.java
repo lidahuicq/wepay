@@ -5,6 +5,7 @@ package me.hao0.wepay.model.enums;
  * Author: haolin
  * Email: haolin.h0@gmail.com
  * Date: 26/11/15
+ *
  * @since 1.0.0
  */
 public enum TradeType {
@@ -27,22 +28,27 @@ public enum TradeType {
     /**
      * 刷卡支付
      */
-    MICROPAY("MICROPAY");
+    MICROPAY("MICROPAY"),
+
+    /**
+     * 代扣
+     */
+    PAP("PAP");
 
 
     private String type;
 
-    private TradeType(String type){
+    private TradeType(String type) {
         this.type = type;
     }
 
-    public String type(){
+    public String type() {
         return type;
     }
 
-    public static TradeType from(String s){
-        for (TradeType tt : TradeType.values()){
-            if (tt.type().equals(s)){
+    public static TradeType from(String s) {
+        for (TradeType tt : TradeType.values()) {
+            if (tt.type().equals(s)) {
                 return tt;
             }
         }
